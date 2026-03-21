@@ -23,9 +23,15 @@ A full-stack data engineering and BI project. This repository demonstrates a com
 * **Product Stars:** Identified "Moccasin Commercial" and "Tan Play" as top profit contributors.
 * **Global Footprint:** Visualized high-density performance hubs in the US and Europe.
 
-## 🚀 How to Run
-1. Clone the repository.
-2. Run `scripts/generate_synthetic_data.py` to create the dataset.
-3. Use `scripts/etl_to_mysql.py` to load the data into your local MySQL instance.
-4. Execute `sql/create_reporting_views.sql` to prepare the reporting layer.
-5. Open `reports/retail_analytics_dashboard.pbix` to explore the dashboard.
+## 🚀 Setup & Execution
+
+### 1. Prerequisites
+* **Python 3.x** with `pandas`, `sqlalchemy`, and `mysql-connector-python`.
+* **MySQL Server** running locally.
+* **Power BI Desktop**.
+
+### 2. Configuration
+Before running, ensure your MySQL credentials in `scripts/etl_to_mysql.py` are updated:
+```python
+# Example Connection String
+engine = create_engine("mysql+mysqlconnector://user:password@localhost/retail_analytics")
